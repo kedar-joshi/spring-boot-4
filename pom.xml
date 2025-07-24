@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Spring Boot parent configuration for centralized dependency management -->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>4.0.0-SNAPSHOT</version>
+
+		<relativePath />
+	</parent>
+
+	<groupId>dev.kedarjoshi.playground</groupId>
+	<artifactId>spring-boot-4</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<!-- This module will be packaged as POM -->
+	<packaging>pom</packaging>
+
+	<name>Spring Boot 4</name>
+	<description>Project for exploring Spring Boot 4</description>
+
+	<!-- Project modules -->
+	<modules>
+
+	</modules>
+
+	<!-- External repositories -->
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<!-- External plugin repositories -->
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-plugin-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<!-- Project properties -->
+	<properties>
+
+		<!-- Compiler configuration -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<java.version>24</java.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+	</properties>
+
+	<!-- Build and plugin configuration -->
+	<build>
+
+		<!-- Common convention for generated artifacts -->
+		<finalName>${project.artifactId}-${project.version}</finalName>
+
+		<!-- Managed plugin configuration -->
+		<pluginManagement>
+			<plugins>
+
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<!-- Managed dependency configuration -->
+	<dependencyManagement>
+		<dependencies>
+
+			<!-- Explicit conflict resolution for Maven 4 -->
+
+			<dependency>
+				<groupId>org.apache.maven.plugin-tools</groupId>
+				<artifactId>maven-plugin-annotations</artifactId>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
