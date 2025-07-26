@@ -116,6 +116,24 @@
 				</exclusions>
 			</dependency>
 
+			<dependency>
+				<groupId>tools.jackson</groupId>
+				<artifactId>jackson-bom</artifactId>
+				<version>3.0.0-rc6</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- <dependency> -->
+			<!-- 	<groupId>com.fasterxml.jackson.dataformat</groupId> -->
+			<!-- 	<artifactId>jackson-dataformat-xml</artifactId> -->
+			<!-- </dependency> -->
+
+			<!-- <dependency> -->
+			<!-- 	<groupId>com.fasterxml.jackson.module</groupId> -->
+			<!-- 	<artifactId>jackson-module-jakarta-xmlbind-annotations</artifactId> -->
+			<!-- </dependency> -->
+
 			<!-- Explicit conflict resolution for Maven 4 -->
 
 			<dependency>
