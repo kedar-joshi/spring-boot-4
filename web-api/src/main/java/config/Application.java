@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * Provides startup configuration of the Spring Boot application.
@@ -12,6 +13,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  * Extending {@link SpringBootServletInitializer} allows application to be deployed
  * as WAR in servlet containers e.g. Tomcat.
  */
+@EnableScheduling
 @ConfigurationPropertiesScan
 @SpringBootApplication(scanBasePackages = { "config", "dev.kedarjoshi.playground" })
 public class Application

@@ -130,6 +130,18 @@
 			<artifactId>flyway-database-postgresql</artifactId>
 		</dependency>
 
+		<!-- Persistence -->
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-hibernate</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-hikaricp</artifactId>
+		</dependency>
+
 		<!-- Testing -->
 
 		<dependency>
