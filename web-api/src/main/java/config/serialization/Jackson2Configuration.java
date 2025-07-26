@@ -58,6 +58,7 @@ public class Jackson2Configuration
 	 *
 	 * @return instance of message converter for JSON.
 	 */
+	@SuppressWarnings("removal")
 	@Bean(name = "mappingJackson2HttpMessageConverter")
 	public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter()
 	{
@@ -69,6 +70,7 @@ public class Jackson2Configuration
 	 *
 	 * @return instance of message converter for XML.
 	 */
+	@SuppressWarnings("removal")
 	@Bean("mappingJackson2XmlHttpMessageConverter")
 	public MappingJackson2XmlHttpMessageConverter mappingJackson2XmlHttpMessageConverter()
 	{

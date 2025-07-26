@@ -110,7 +110,6 @@ public class JacksonConfiguration
 	 */
 	private static <O extends ObjectMapper, T extends MapperBuilder<O, ?>> T configureMapper(final T builder)
 	{
-
 		// Disabling failure generation for unknown properties
 		builder.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
