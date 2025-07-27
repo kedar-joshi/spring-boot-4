@@ -10,4 +10,9 @@ public class BaseRepository
 	{
 		this.db = entityManager;
 	}
+
+	public <T> void save(final T entity)
+	{
+		db.persist(entity);
+	}
 }

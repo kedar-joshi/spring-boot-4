@@ -7,9 +7,13 @@ import jakarta.persistence.*;
 public class Token
 {
 	@Id
-	@Column(name = "id", nullable = false)
+	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+
+	@Version
+	@Column(name = "version", nullable = false)
+	private Integer version;
 
 	public Long getId()
 	{
@@ -21,11 +25,22 @@ public class Token
 		this.id = id;
 	}
 
+	public Integer getVersion()
+	{
+		return version;
+	}
+
+	public void setVersion(final Integer version)
+	{
+		this.version = version;
+	}
+
 	@Override
 	public String toString()
 	{
 		return "Token{" +
 			   "id=" + id +
+			   ", version=" + version +
 			   '}';
 	}
 }
